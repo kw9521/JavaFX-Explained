@@ -1,4 +1,4 @@
-package interacting;
+package CloseApplications;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -18,18 +18,16 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage){
         window = primaryStage;
-        primaryStage.setTitle("Title of Window");
+        primaryStage.setTitle("JavaFX - Closing Applications");
         button = new Button("Press here");
-
-        button.setOnAction(e-> {
-            boolean result = InteractionOfWindows.display("Title of Window", "Are you sure u want to continue?");
-            System.out.println(result);
-        });
+//        button.setOnAction(e -> close);
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
+
         Scene scene = new Scene(layout,300,300);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
 }

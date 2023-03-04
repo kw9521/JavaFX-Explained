@@ -1,4 +1,4 @@
-package hellofx;
+package PopUpWindows;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -7,15 +7,15 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import static javafx.application.Application.launch;
 
 public class PopUpWindows{
 
-//    public static void main(String[] args) {
-//        launch(args);
-//    }
-
-    // alert boxes DO NOT ALLOW U TO click stuff from the other alert box
+    /**
+     * Makes the pop-up screen and centers it
+     *
+     * @param title: String
+     * @param msg: String
+     */
     public static void display(String title, String msg){
         Stage window = new Stage();
 

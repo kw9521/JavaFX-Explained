@@ -13,7 +13,9 @@ public class InteractionOfWindows{
     static boolean answer;
 
     /**
-     *
+     * Prompts user to click on window 1's button.
+     * Another window pops up and forces user to click one of the choices before going back to other window.
+     * Click either yes or no and prints that true if yes, false if no.
      * @param title: String
      * @param msg: String
      */

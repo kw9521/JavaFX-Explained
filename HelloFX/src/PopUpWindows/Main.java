@@ -1,4 +1,4 @@
-package hellofx;
+package PopUpWindows;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -8,7 +8,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class CoolButton extends Application implements EventHandler<ActionEvent> {
+/**
+ * Example code for making pop-up windows
+ */
+public class Main extends Application implements EventHandler<ActionEvent> {
 
     Button button;
     Stage window;
@@ -17,6 +20,16 @@ public class CoolButton extends Application implements EventHandler<ActionEvent>
         launch(args);
     }
 
+    /**
+     * Prompts user to click on 1 button and another screen pops up, not allowing user to go back to the other scene
+     * unless they interact with current screen
+     *
+     * @param primaryStage the primary stage for this application, onto which
+     * the application scene can be set.
+     * Applications may create other stages, if needed, but they will not be
+     * primary stages.
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
