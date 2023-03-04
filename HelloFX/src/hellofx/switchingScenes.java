@@ -20,7 +20,7 @@ public class switchingScenes extends Application{
     @Override
     public void start(Stage primarysStage) throws Exception {
         window = primarysStage;
-        
+
         // Label is a chunk of text, user doesnt interact w it at all
         Label label1 = new Label("Welcome to the first scene");
         Button button1 = new Button("Go to scene 2");
@@ -33,12 +33,12 @@ public class switchingScenes extends Application{
 
         //Button 2
         Button button2 = new Button("this scene suckkkks go back to scene 1");
-        button1.setOnAction(e -> window.setScene(scene1));      //does something when you click it
+        button2.setOnAction(e -> window.setScene(scene1));      //does something when you click it
 
         //Layout 2
         StackPane layout2 = new StackPane();
         layout2.getChildren().addAll(button2);
-        scene2 = new Scene(layout1, 600, 600);
+        scene2 = new Scene(layout2, 600, 600);
 
         // how window knows to displace scene1 first?
         window.setScene(scene1);

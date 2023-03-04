@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 public class CoolButton extends Application implements EventHandler<ActionEvent> {
 
     Button button;
+    Stage window;
 
     public static void main(String[] args){
         launch(args);
@@ -18,11 +19,12 @@ public class CoolButton extends Application implements EventHandler<ActionEvent>
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        window = primaryStage;
         primaryStage.setTitle("Title of Window");
-        button = new Button();
-        button.setText("Press here");
 
-        button.setOnAction(this);
+
+        button = new Button("Press here");
+        button.setOnAction(e-> PopUpWindows.display("Title of window", "wow, this is cool"));
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
